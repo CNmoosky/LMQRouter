@@ -6,14 +6,26 @@
 //  Copyright © 2017 limengqi. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-//! Project version number for LMQRouter.
-FOUNDATION_EXPORT double LMQRouterVersionNumber;
+typedef void(^LMQRouterBlock)(NSDictionary *result);
+typedef id(^LMQRouterObjectBlock)(NSDictionary *result);
 
-//! Project version string for LMQRouter.
-FOUNDATION_EXPORT const unsigned char LMQRouterVersionString[];
+@interface LMQRouter : NSObject
 
-// In this header, you should import all the public headers of your framework using statements like #import <LMQRouter/PublicHeader.h>
++ (void)registerURLPattern:(NSString *)URLPattern forBlock:(LMQRouterBlock)block;
 
++ (void)deregisterURLPattern:(NSString *)URLPattern;
+
++ (void)openURL:(NSString *)URL withPrame:(NSDictionary *)prame completion:(LMQRouterBlock)completion;
+
+
++ (void)registerURLPattern:(NSString *)URLPattern forObjectBlock:(LMQRouterObjectBlock)block;
+
++ (id)objectFromURL:(NSString *)URL withPrame:(NSDictionary *)prame;
+
+
++ (NSString *)generateURLWithPattern:(NSString *)pattern parameters:(NSArray *)parameters;
+
+@end
 

@@ -6,14 +6,51 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		B37DF25D1F08834F00A36920 /* LMQRouterArchive */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = B37DF25E1F08834F00A36920 /* Build configuration list for PBXAggregateTarget "LMQRouterArchive" */;
+			buildPhases = (
+				B37DF2611F08836000A36920 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = LMQRouterArchive;
+			productName = LMQRouterArchive;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
-		B3EC499D22F826B200B15F21 /* LMQRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = B3EC499B22F826B200B15F21 /* LMQRouter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B37DF2641F088AA500A36920 /* LMQRouterTool.h in Headers */ = {isa = PBXBuildFile; fileRef = B37DF2621F088AA500A36920 /* LMQRouterTool.h */; };
+		B37DF2651F088AA500A36920 /* LMQRouterTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B37DF2631F088AA500A36920 /* LMQRouterTool.m */; };
+		B37DF2671F0894B700A36920 /* LMQRouter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3EC499822F826B200B15F21 /* LMQRouter.framework */; };
+		B3EC49A522F826B200B15F21 /* LMQRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = B3EC49A322F826B200B15F21 /* LMQRouter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3EC49A622F826B200B15F21 /* LMQRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = B3EC49A422F826B200B15F21 /* LMQRouter.m */; };
+		B3EC49AF22F826B200B15F21 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3EC49AE22F826B200B15F21 /* AppDelegate.m */; };
+		B3EC49B222F826B200B15F21 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3EC49B122F826B200B15F21 /* ViewController.m */; };
+		B3EC49B522F826B200B15F21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3EC49B322F826B200B15F21 /* Main.storyboard */; };
+		B3EC49B722F826B200B15F21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3EC49B622F826B200B15F21 /* Assets.xcassets */; };
+		B3EC49BA22F826B200B15F21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3EC49B822F826B200B15F21 /* LaunchScreen.storyboard */; };
+		B3EC49BD22F826B200B15F21 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B3EC49BC22F826B200B15F21 /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B37DF2621F088AA500A36920 /* LMQRouterTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMQRouterTool.h; sourceTree = "<group>"; };
+		B37DF2631F088AA500A36920 /* LMQRouterTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LMQRouterTool.m; sourceTree = "<group>"; };
 		B3EC499822F826B200B15F21 /* LMQRouter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LMQRouter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B3EC499B22F826B200B15F21 /* LMQRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMQRouter.h; sourceTree = "<group>"; };
 		B3EC499C22F826B200B15F21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3EC49A322F826B200B15F21 /* LMQRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMQRouter.h; sourceTree = "<group>"; };
+		B3EC49A422F826B200B15F21 /* LMQRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LMQRouter.m; sourceTree = "<group>"; };
+		B3EC49AB22F826B200B15F21 /* LMQRouterDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LMQRouterDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3EC49AD22F826B200B15F21 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B3EC49AE22F826B200B15F21 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B3EC49B022F826B200B15F21 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B3EC49B122F826B200B15F21 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B3EC49B422F826B200B15F21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B3EC49B622F826B200B15F21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B3EC49B922F826B200B15F21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B3EC49BB22F826B200B15F21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3EC49BC22F826B200B15F21 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -24,14 +61,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B3EC49A822F826B200B15F21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B37DF2671F0894B700A36920 /* LMQRouter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B37DF2661F0894B700A36920 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B3EC498E22F826B200B15F21 = {
 			isa = PBXGroup;
 			children = (
 				B3EC499A22F826B200B15F21 /* LMQRouter */,
+				B3EC49AC22F826B200B15F21 /* LMQRouterDemo */,
 				B3EC499922F826B200B15F21 /* Products */,
+				B37DF2661F0894B700A36920 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -39,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				B3EC499822F826B200B15F21 /* LMQRouter.framework */,
+				B3EC49AB22F826B200B15F21 /* LMQRouterDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -46,10 +101,29 @@
 		B3EC499A22F826B200B15F21 /* LMQRouter */ = {
 			isa = PBXGroup;
 			children = (
-				B3EC499B22F826B200B15F21 /* LMQRouter.h */,
 				B3EC499C22F826B200B15F21 /* Info.plist */,
+				B3EC49A322F826B200B15F21 /* LMQRouter.h */,
+				B3EC49A422F826B200B15F21 /* LMQRouter.m */,
+				B37DF2621F088AA500A36920 /* LMQRouterTool.h */,
+				B37DF2631F088AA500A36920 /* LMQRouterTool.m */,
 			);
 			path = LMQRouter;
+			sourceTree = "<group>";
+		};
+		B3EC49AC22F826B200B15F21 /* LMQRouterDemo */ = {
+			isa = PBXGroup;
+			children = (
+				B3EC49AD22F826B200B15F21 /* AppDelegate.h */,
+				B3EC49AE22F826B200B15F21 /* AppDelegate.m */,
+				B3EC49B022F826B200B15F21 /* ViewController.h */,
+				B3EC49B122F826B200B15F21 /* ViewController.m */,
+				B3EC49B322F826B200B15F21 /* Main.storyboard */,
+				B3EC49B622F826B200B15F21 /* Assets.xcassets */,
+				B3EC49B822F826B200B15F21 /* LaunchScreen.storyboard */,
+				B3EC49BB22F826B200B15F21 /* Info.plist */,
+				B3EC49BC22F826B200B15F21 /* main.m */,
+			);
+			path = LMQRouterDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,7 +133,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3EC499D22F826B200B15F21 /* LMQRouter.h in Headers */,
+				B37DF2641F088AA500A36920 /* LMQRouterTool.h in Headers */,
+				B3EC49A522F826B200B15F21 /* LMQRouter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +159,23 @@
 			productReference = B3EC499822F826B200B15F21 /* LMQRouter.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		B3EC49AA22F826B200B15F21 /* LMQRouterDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3EC49BE22F826B200B15F21 /* Build configuration list for PBXNativeTarget "LMQRouterDemo" */;
+			buildPhases = (
+				B3EC49A722F826B200B15F21 /* Sources */,
+				B3EC49A822F826B200B15F21 /* Frameworks */,
+				B3EC49A922F826B200B15F21 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LMQRouterDemo;
+			productName = LMQRouterDemo;
+			productReference = B3EC49AB22F826B200B15F21 /* LMQRouterDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -93,7 +185,13 @@
 				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = limengqi;
 				TargetAttributes = {
+					B37DF25D1F08834F00A36920 = {
+						CreatedOnToolsVersion = 10.3;
+					};
 					B3EC499722F826B200B15F21 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					B3EC49AA22F826B200B15F21 = {
 						CreatedOnToolsVersion = 10.3;
 					};
 				};
@@ -104,6 +202,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = B3EC498E22F826B200B15F21;
 			productRefGroup = B3EC499922F826B200B15F21 /* Products */;
@@ -111,6 +210,8 @@
 			projectRoot = "";
 			targets = (
 				B3EC499722F826B200B15F21 /* LMQRouter */,
+				B3EC49AA22F826B200B15F21 /* LMQRouterDemo */,
+				B37DF25D1F08834F00A36920 /* LMQRouterArchive */,
 			);
 		};
 /* End PBXProject section */
@@ -123,19 +224,98 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B3EC49A922F826B200B15F21 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3EC49BA22F826B200B15F21 /* LaunchScreen.storyboard in Resources */,
+				B3EC49B722F826B200B15F21 /* Assets.xcassets in Resources */,
+				B3EC49B522F826B200B15F21 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B37DF2611F08836000A36920 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B3EC499422F826B200B15F21 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3EC49A622F826B200B15F21 /* LMQRouter.m in Sources */,
+				B37DF2651F088AA500A36920 /* LMQRouterTool.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3EC49A722F826B200B15F21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3EC49B222F826B200B15F21 /* ViewController.m in Sources */,
+				B3EC49BD22F826B200B15F21 /* main.m in Sources */,
+				B3EC49AF22F826B200B15F21 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		B3EC49B322F826B200B15F21 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B3EC49B422F826B200B15F21 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B3EC49B822F826B200B15F21 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B3EC49B922F826B200B15F21 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		B37DF25F1F08834F00A36920 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CY2Y7Z7G9M;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B37DF2601F08834F00A36920 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CY2Y7Z7G9M;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		B3EC499E22F826B200B15F21 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -188,7 +368,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -244,7 +424,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -258,9 +438,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = CY2Y7Z7G9M;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -271,8 +451,10 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = com.qinastudio.LMQRouter;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -282,9 +464,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = CY2Y7Z7G9M;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -295,9 +477,49 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = com.qinastudio.LMQRouter;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B3EC49BF22F826B200B15F21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = LMQRouterDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.qinastudio.LMQRouterDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B3EC49C022F826B200B15F21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = LMQRouterDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.qinastudio.LMQRouterDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -305,6 +527,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B37DF25E1F08834F00A36920 /* Build configuration list for PBXAggregateTarget "LMQRouterArchive" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B37DF25F1F08834F00A36920 /* Debug */,
+				B37DF2601F08834F00A36920 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B3EC499222F826B200B15F21 /* Build configuration list for PBXProject "LMQRouter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -319,6 +550,15 @@
 			buildConfigurations = (
 				B3EC49A122F826B200B15F21 /* Debug */,
 				B3EC49A222F826B200B15F21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3EC49BE22F826B200B15F21 /* Build configuration list for PBXNativeTarget "LMQRouterDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3EC49BF22F826B200B15F21 /* Debug */,
+				B3EC49C022F826B200B15F21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
