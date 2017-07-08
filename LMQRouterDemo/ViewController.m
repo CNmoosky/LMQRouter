@@ -121,13 +121,13 @@
     
     
     //注册URL对应的对象
-    [LMQRouter registerURLPattern:@"mgj://userView" forObjectBlock:^id(NSDictionary *routerParameters) {
+    [LMQRouter registerURLPattern:@"lmq://userView" forObjectBlock:^id(NSDictionary *routerParameters) {
         UIView *userView = [[UIView alloc] init];
         return userView;
     }];
     
     //获取URL对应的对象
-    UIView *userView = [LMQRouter objectFromURL:@"mgj://userView" withPrame:nil];
+    UIView *userView = [LMQRouter objectFromURL:@"lmq://userView" withPrame:nil];
     NSLog(@"%@",userView.description);
 }
 
