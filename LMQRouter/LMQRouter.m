@@ -9,7 +9,8 @@
 #import "LMQRouter.h"
 #import "LMQRouterTool.h"
 
-
+static NSString * const LMQ_ROUTER_BLOCK_DATA_KEY = @"^";
+static NSString *const LMQRouterParameterBlockKey = @"block";
 
 @interface LMQRouter ()
 
@@ -45,7 +46,7 @@
 {
     LMQRouter *router = [LMQRouter sharedInstance];
     URL = [URL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    NSMutableDictionary *parameters = [LMQRouterTool extractParametersFromURL:URL withRoutes:router.routes matchExactly:NO];
+    NSMutableDictionary *parameters = [self extractParametersFromURL:URL withRoutes:router.routes matchExactly:NO];
     
     [parameters enumerateKeysAndObjectsUsingBlock:^(id key, NSString *obj, BOOL *stop) {
         if ([obj isKindOfClass:[NSString class]]) {
@@ -79,7 +80,7 @@
     LMQRouter *router = [LMQRouter sharedInstance];
     
     URL = [URL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    NSMutableDictionary *parameters = [LMQRouterTool extractParametersFromURL:URL withRoutes:router.routes matchExactly:NO];
+    NSMutableDictionary *parameters = [self extractParametersFromURL:URL withRoutes:router.routes matchExactly:NO];
     LMQRouterObjectBlock block = parameters[LMQRouterParameterBlockKey];
     
     if (block) {
@@ -158,6 +159,66 @@
 + (NSString *)generateURLWithPattern:(NSString *)pattern parameters:(NSArray *)parameters
 {
     return [LMQRouterTool generateURLWithPattern:pattern parameters:parameters];
+}
+
++ (NSMutableDictionary *)extractParametersFromURL:(NSString *)url withRoutes:(NSMutableDictionary *)routes matchExactly:(BOOL)exactly
+{
+    NSMutableDictionary* parameters = [NSMutableDictionary dictionary];
+    
+    parameters[LMQRouterParameterURLKey] = url;
+    
+    NSMutableDictionary* subRoutes = routes;
+    NSArray* pathComponents = [LMQRouterTool pathComponentsFromURL:url];
+    
+    BOOL found = NO;
+    for (NSString* pathComponent in pathComponents) {
+        NSArray *subRoutesKeys =[subRoutes.allKeys sortedArrayUsingComparator:^NSComparisonResult(NSString *obj1, NSString *obj2) {
+            return [obj1 compare:obj2];
+        }];
+        
+        for (NSString* key in subRoutesKeys) {
+            if ([key isEqualToString:pathComponent] || [key isEqualToString:LMQ_ROUTER_PLACEHOLDER_CHARACTER]) {
+                found = YES;
+                subRoutes = subRoutes[key];
+                break;
+            } else if ([key hasPrefix:@":"]) {
+                found = YES;
+                subRoutes = subRoutes[key];
+                NSString *newKey = [key substringFromIndex:1];
+                NSString *newPathComponent = pathComponent;
+                // if :id.html -> :id
+                if ([LMQRouterTool checkIfContainsSpecialCharacter:key]) {
+                    NSCharacterSet *specialCharacterSet = [NSCharacterSet characterSetWithCharactersInString:URLSpecialCharacters];
+                    NSRange range = [key rangeOfCharacterFromSet:specialCharacterSet];
+                    if (range.location != NSNotFound) {
+                        newKey = [newKey substringToIndex:range.location - 1];
+                        NSString *suffixToStrip = [key substringFromIndex:range.location];
+                        newPathComponent = [newPathComponent stringByReplacingOccurrencesOfString:suffixToStrip withString:@""];
+                    }
+                }
+                parameters[newKey] = newPathComponent;
+                break;
+            } else if (exactly) {
+                found = NO;
+            }
+        }
+        
+        if (!found && !subRoutes[LMQ_ROUTER_BLOCK_DATA_KEY]) {
+            return nil;
+        }
+    }
+    
+    NSArray<NSURLQueryItem *> *queryItems = [[NSURLComponents alloc] initWithURL:[[NSURL alloc] initWithString:url] resolvingAgainstBaseURL:false].queryItems;
+    
+    for (NSURLQueryItem *item in queryItems) {
+        parameters[item.name] = item.value;
+    }
+    
+    if (subRoutes[LMQ_ROUTER_BLOCK_DATA_KEY]) {
+        parameters[LMQRouterParameterBlockKey] = [subRoutes[LMQ_ROUTER_BLOCK_DATA_KEY] copy];
+    }
+    
+    return parameters;
 }
 
 

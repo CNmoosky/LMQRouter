@@ -21,6 +21,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		B320D3FE1F1088C700E009D6 /* LMQRouterConst.h in Headers */ = {isa = PBXBuildFile; fileRef = B320D3FC1F1088C700E009D6 /* LMQRouterConst.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B320D3FF1F1088C700E009D6 /* LMQRouterConst.m in Sources */ = {isa = PBXBuildFile; fileRef = B320D3FD1F1088C700E009D6 /* LMQRouterConst.m */; };
 		B37DF2641F088AA500A36920 /* LMQRouterTool.h in Headers */ = {isa = PBXBuildFile; fileRef = B37DF2621F088AA500A36920 /* LMQRouterTool.h */; };
 		B37DF2651F088AA500A36920 /* LMQRouterTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B37DF2631F088AA500A36920 /* LMQRouterTool.m */; };
 		B37DF2671F0894B700A36920 /* LMQRouter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3EC499822F826B200B15F21 /* LMQRouter.framework */; };
@@ -35,6 +37,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B320D3FC1F1088C700E009D6 /* LMQRouterConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMQRouterConst.h; sourceTree = "<group>"; };
+		B320D3FD1F1088C700E009D6 /* LMQRouterConst.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LMQRouterConst.m; sourceTree = "<group>"; };
 		B37DF2621F088AA500A36920 /* LMQRouterTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMQRouterTool.h; sourceTree = "<group>"; };
 		B37DF2631F088AA500A36920 /* LMQRouterTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LMQRouterTool.m; sourceTree = "<group>"; };
 		B3EC499822F826B200B15F21 /* LMQRouter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LMQRouter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +110,8 @@
 				B3EC49A422F826B200B15F21 /* LMQRouter.m */,
 				B37DF2621F088AA500A36920 /* LMQRouterTool.h */,
 				B37DF2631F088AA500A36920 /* LMQRouterTool.m */,
+				B320D3FC1F1088C700E009D6 /* LMQRouterConst.h */,
+				B320D3FD1F1088C700E009D6 /* LMQRouterConst.m */,
 			);
 			path = LMQRouter;
 			sourceTree = "<group>";
@@ -134,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B37DF2641F088AA500A36920 /* LMQRouterTool.h in Headers */,
+				B320D3FE1F1088C700E009D6 /* LMQRouterConst.h in Headers */,
 				B3EC49A522F826B200B15F21 /* LMQRouter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B320D3FF1F1088C700E009D6 /* LMQRouterConst.m in Sources */,
 				B3EC49A622F826B200B15F21 /* LMQRouter.m in Sources */,
 				B37DF2651F088AA500A36920 /* LMQRouterTool.m in Sources */,
 			);

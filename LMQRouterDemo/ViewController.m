@@ -20,9 +20,20 @@
     
     [LMQRouter registerURLPattern:@"lmq://hahaha" forBlock:^(NSDictionary *result) {
         NSLog(@"你好啊");
+        if (result) {
+            NSLog(@"%@",result);
+            NSLog(@"%@\n",result[LMQRouterParameterURLKey]);
+            NSLog(@"%@\n",result[LMQRouterParameterPrameKey]);
+            NSLog(@"%@\n",result[LMQRouterParameterCompletionBlockKey]);
+        }
     }];
     
-    [LMQRouter openURL:@"lmq://hahaha" withPrame:@{@"ss":@"sss"} completion:nil];
+    [LMQRouter openURL:@"lmq://hahaha" withPrame:@{@"ss":@"sss"} completion:^(NSDictionary *result) {
+        NSLog(@"Hello World!");
+        if (result) {
+            NSLog(@"%@",result);
+        }
+    }];
 }
 
 

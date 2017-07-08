@@ -12,16 +12,11 @@
 
 + (NSArray*)pathComponentsFromURL:(NSString*)URL;
 
-+ (NSMutableDictionary *)extractParametersFromURL:(NSString *)url withRoutes:(NSMutableDictionary *)routes matchExactly:(BOOL)exactly;
-
 + (NSString *)generateURLWithPattern:(NSString *)pattern parameters:(NSArray *)parameters;
+
++ (BOOL)checkIfContainsSpecialCharacter:(NSString *)checkedString;
 
 @end
 
-extern NSString * const LMQ_ROUTER_BLOCK_DATA_KEY;
+extern NSString * const URLSpecialCharacters;
 extern NSString * const LMQ_ROUTER_PLACEHOLDER_CHARACTER;
-
-extern NSString *const LMQRouterParameterBlockKey;
-extern NSString *const LMQRouterParameterURLKey;
-extern NSString *const LMQRouterParameterCompletionBlockKey;
-extern NSString *const LMQRouterParameterPrameKey;

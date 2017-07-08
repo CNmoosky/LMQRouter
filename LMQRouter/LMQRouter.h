@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "LMQRouterConst.h"
 
 typedef void(^LMQRouterBlock)(NSDictionary *result);
 typedef id(^LMQRouterObjectBlock)(NSDictionary *result);
